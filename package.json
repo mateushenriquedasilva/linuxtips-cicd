@@ -1,0 +1,12 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
