@@ -1,32 +1,69 @@
 # LinuxTips CI/CD
 
-Um projeto simples demonstrando CI/CD com Docker, Google Cloud Build e Cloud Run.
+A practical CI/CD learning project from the course "Simplifying DevOps using Google Cloud Platform".
 
-## 📋 Sobre o Projeto
+## Overview
 
-Esta é uma aplicação Node.js básica que demonstra a implementação de um pipeline de CI/CD usando as ferramentas do Google Cloud Platform. A aplicação retorna uma mensagem JSON simples indicando que foi implantada com sucesso.
+This repository demonstrates a simple JavaScript application packaged with Docker and prepared for cloud build/deployment workflows. It focuses on hands-on CI/CD concepts using Google Cloud tooling.
 
-## 🛠️ Tecnologias Utilizadas
+## Features
 
-- **Node.js** - Runtime JavaScript
-- **Docker** - Containerização
-- **Google Cloud Build** - CI/CD
-- **Google Cloud Run** - Deploy serverless
-- **Google Artifact Registry** - Registro de containers
+- Containerized application (`Dockerfile`)
+- Cloud Build pipeline configuration (`cloudbuild.yaml`)
+- Minimal Node.js app structure
+- DevOps-oriented baseline for CI/CD studies
 
-## ☁️ Deploy no Google Cloud
+## Tech Stack
 
-O projeto está configurado para deploy automático usando Google Cloud Build. O pipeline é acionado automaticamente quando há push para a branch principal.
+- Node.js
+- Docker
+- Google Cloud Build
 
-### Configuração do Pipeline
+## Project Structure
 
-O arquivo `cloudbuild.yaml` define três etapas:
+- `src/`: application source code
+- `Dockerfile`: image build definition
+- `cloudbuild.yaml`: CI/CD pipeline steps
+- `package.json`: app dependencies/scripts
 
-1. **Build** - Constrói a imagem Docker
-2. **Push** - Envia a imagem para o Artifact Registry
-3. **Deploy** - Implanta no Cloud Run
+## Getting Started
 
-## 👨‍💻 Autor
+1. Clone the repository:
 
-**Mateus Henrique da Silva**
-- GitHub: [@mateushenriquedasilva](https://github.com/mateushenriquedasilva)
+```bash
+git clone https://github.com/mateushenriquedasilva/linuxtips-cicd.git
+cd linuxtips-cicd
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run locally:
+
+```bash
+npm start
+```
+
+4. Build Docker image:
+
+```bash
+docker build -t linuxtips-cicd .
+```
+
+## CI/CD Notes
+
+- `cloudbuild.yaml` can be used as a baseline for GCP pipelines
+- You can extend it with test stages, vulnerability scanning, and deployment steps
+
+## Roadmap
+
+- Add automated tests in pipeline
+- Add lint and security checks
+- Add staging and production deployment strategies
+
+## License
+
+This project is available under the repository license terms.
